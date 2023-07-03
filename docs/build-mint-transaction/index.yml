@@ -1,0 +1,42 @@
+post:
+    summary: build transaction for minting cns domain
+    requestBody:
+        content:
+            application/json:
+                schema:
+                    $ref: './payload.yml'
+    responses:
+        '200':
+            description: successful operation
+            content:
+                application/json:
+                    schema:
+                        $ref: './success.yml'
+        '400':
+            description: generic error
+            content:
+                application/json:
+                    schema:
+                        oneOf:
+                            - $ref: '../errors/BloomFilterNotFoundError.yml'
+                            - $ref: '../errors/BloomFilterIsCachedError.yml'
+                            - $ref: '../errors/DomainReservedError.yml'
+                            - $ref: '../errors/DomainAuctionAvailableError.yml'
+                            - $ref: '../errors/DomainTakenError.yml'
+                application/xml:
+                    schema:
+                        oneOf:
+                            - $ref: '../errors/BloomFilterNotFoundError.yml'
+                            - $ref: '../errors/BloomFilterIsCachedError.yml'
+                            - $ref: '../errors/DomainReservedError.yml'
+                            - $ref: '../errors/DomainAuctionAvailableError.yml'
+                            - $ref: '../errors/DomainTakenError.yml'
+        '500':
+            description: internal server error
+            content:
+                application/json:
+                    schema:
+                        $ref: '../errors/InternalServerError.yml'
+                application/xml:
+                    schema:
+                        $ref: '../errors/InternalServerError.yml'

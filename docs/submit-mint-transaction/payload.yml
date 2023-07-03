@@ -1,0 +1,8 @@
+type: object
+properties:
+    tx_hash:
+        type: string
+        example: someHash
+    wallet_address:
+        type: string
+        example: addr1qy4pe8q8xdpglz2fup6m06d5at30x94mxl3qwqvuz9df80ck9lfylyuf6r5zqahuc5dnwfnyzra0nrn8rcg6x5ts5lhsmyfgyd

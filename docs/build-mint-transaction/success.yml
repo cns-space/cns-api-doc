@@ -1,0 +1,5 @@
+type: object
+properties:
+    tx_hash:
+        type: string
+        example: 05069442a9aa6ddb4ed63e585212937e6cf8e0121457ec5265e43088b90c885e

@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: CNS backend API documentation
+  version: 1.0.0
+  description: CNS
+
+servers:
+  - url: http://localhost:4000/local
+    description: Local server
+  - url: https://1cofsxx5hj.execute-api.ap-east-1.amazonaws.com/dev/
+    description: Dev server
+
+paths:
+  /transaction/build:
+    $ref: "./build-mint-transaction/index.yml"
+  /transaction/submit:
+    $ref: "./submit-mint-transaction/index.yml"
