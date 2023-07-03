@@ -1,5 +1,5 @@
 type: object
 properties:
-    tx_id:
-        type: string
-        example: someTransactionId
+  tx_id:
+    type: string
+    example: someTransactionId

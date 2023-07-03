@@ -1,23 +1,23 @@
 post:
-    summary: submit signed transaction to chain
-    requestBody:
-        content:
-            application/json:
-                schema:
-                    $ref: './payload.yml'
-        responses:
-            '200':
-                description: successful operation
-                content:
-                    application/json:
-                        schema:
-                            $ref: './success.yml'
-            '500':
-                description: internal server error
-                content:
-                    application/json:
-                        schema:
-                            $ref: '../errors/InternalServerError.yml'
-                    application/xml:
-                        schema:
-                            $ref: '../errors/InternalServerError.yml'
+  summary: submit signed transaction to chain
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "./payload.yml"
+  responses:
+    "200":
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "./success.yml"
+    "500":
+      description: internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "../errors/InternalServerError.yml"
+        application/xml:
+          schema:
+            $ref: "../errors/InternalServerError.yml"
